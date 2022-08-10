@@ -22,6 +22,7 @@ body {
 }
 
 .header {
+    background: radial-gradient(circle at left bottom, #559CBD , #6BDFFF);
     display: flex;
     flex-direction: row;
     width: 100vw;
@@ -36,20 +37,30 @@ body {
 }
 
 .header__content_left {
-    background-color: var(--meeseck-dark-color);
+    /* background-color: var(--meeseck-dark-color); */
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    padding: 70px;
 
 }
 
 .header__title {
     color: var(--title-color) ;
-    font-size: 7.7rem;
-    line-height: 7.8rem;
     font-family: 'Heebo', sans-serif;
+    font-size: 13rem;
+    line-height: 13.5rem;
+    font-family: 'Heebo', sans-serif;
+    font-weight: 700;
+}
+
+.header__title_divider {
+    display: block;
 }
 
 
 
 .header__content_right {
-    background-color: var(--meeseck-dark-color);
+    /* background-color: var(--meeseck-dark-color); */
 }
 
