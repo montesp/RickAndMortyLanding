@@ -1,12 +1,11 @@
 const API = 'https://rickandmortyapi.com/api/character/1';
-const 
+const imgContainer =  document.getElementById('')
 
 
-function fetchAPIImage(API){
-    fetch(API)
-        .then(response => response.json())
-        .then(data =>  console.log(data));
-}
 
-fetchAPI(API);
+fetch(API)
+    .then(response => response.json())
+    .then(data =>  console.log(data));
+
+
 
