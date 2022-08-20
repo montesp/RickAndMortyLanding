@@ -170,6 +170,27 @@ body {
     left: 35px;
 }
 
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0 20px;
+}
+
+.hero__carrusel {
+    background-color: #100F0F;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+
+
 @media ( max-width: 1440px ) {
     .header__drawing {
         height: 500px;
@@ -186,10 +207,8 @@ body {
 
 @media ( max-width: 1024px ) {
     .header__drawing {
-
         height: 400px;
         width: 400px;
-
     }
 }
 
