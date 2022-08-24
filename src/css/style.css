@@ -5,8 +5,9 @@
     --meeseck-dark-color:#559CBD;
     --mouth-inside: #801233;
     --tooth: #fce9ab;
+    --hair: #b8564a;
     --title-color: #100F0F;
-    --page-color: #1B1A17;
+    --page-color: #131313;
 }
 
 * {
@@ -24,7 +25,7 @@ body {
 }
 
 .header {
-    background: radial-gradient(circle at left bottom, #559CBD , #6BDFFF);
+    background: radial-gradient(circle at right top, #559CBD , #6BDFFF);
     display: flex;
     flex-direction: row;
     width: 100vw;
@@ -70,12 +71,13 @@ body {
     border: 3px solid black;
     border-radius: 50%;
     /* transform: translateY(-700px); */
-    animation: apear 3s ease ; 
+    animation: apear 3s ease ;
 }
+
 
 .eyes__container {
     position: absolute;
-    top: 0;
+    top: 40px;
     right: 0;
     left: 0;
     height: 50%;
@@ -115,7 +117,6 @@ body {
     width: 80px;
     height: 80px;
     border-top: 6px solid black;
-    /* border: 3px solid black; */
     border-radius: 5px;
 }
 
@@ -175,8 +176,6 @@ body {
     right: 0;
     left: 0;
     height: 50%;
-    border: 1px solid #559CBD;
-    /* background-color: #100F0F; */
 }
 
 .mouth {
@@ -186,8 +185,8 @@ body {
     top: 5%;
     width: 60%;
     height: 40%;
-    border: 1px solid black;
-    /* background-color: var(--mouth-inside); */
+    border: 3px solid black;
+    background-color: var(--mouth-inside);
     border-radius: 200px;
 }
 
@@ -195,12 +194,10 @@ body {
     position: absolute;
     right: 12.5%;
     left: 12.5%;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     width: 75%;
     height: 40%;
-    border: 1px solid wheat;
-    /* background-color: white; */
 }
 
 .tooth__container--top {
@@ -211,6 +208,28 @@ body {
     bottom: 0;
 }
 
+.teeth {
+    background-color: var(--tooth);
+    width: 95%;
+    height: 100%;
+    border: 3px solid black;
+}
+
+.tooth__container--top .teeth {
+    border-radius: 0 0 50px 50px;
+    border-top-color: transparent;
+}
+
+
+.tooth__container--bottom .teeth {
+    border-radius: 50px 50px 0 0;
+    border-bottom-color: transparent;
+
+}
+
+.tongue {
+    position: absolute;
+}
 
 
 .main {
