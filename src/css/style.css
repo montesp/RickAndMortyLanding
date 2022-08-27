@@ -66,6 +66,7 @@ body {
 
 .header__drawing {
     position: relative;
+    z-index: 2;
     height: 700px;
     width: 700px;
     border: 3px solid black;
@@ -132,8 +133,6 @@ body {
 
 }
 
-
-
 .eye {
     position: absolute;
     top: 125px;
@@ -150,7 +149,6 @@ body {
 .eye--left {
     left: 210px;
 }
-
 
 
 .iris {
@@ -233,12 +231,12 @@ body {
 
 
 .main {
-    background-color: #100F0F;
     display: flex;
     flex-direction: column;
 }
 
 .hero {
+    background-color: #100F0F;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -271,7 +269,9 @@ body {
 }
 
 
-@media ( max-width: 1440px ) {
+
+
+@media ( max-width: 1439px ) {
     .header__drawing {
         height: 500px;
         width: 500px;
