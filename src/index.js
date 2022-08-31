@@ -11,7 +11,7 @@ async function fetchData(api){
 
     if (response.ok){
         const data = await response.json();
-        return data.image;
+        return data;
     } else {
         return Promise.reject(response);
     }
@@ -35,6 +35,7 @@ const mainCharacterImageContainer = async (images, container) => {
         view += `
             <img class="carrusel-character__image" src="${images[index]}" alt="">
         `;
+        // container.insertAdjacentHTML('afterbegin', view);
         container.innerHTML = view;
 
     }
@@ -46,16 +47,18 @@ const mainCharacterImageContainer = async (images, container) => {
     try {
         let images = []
         for (let i = 1; i <= 3; i++) {
-            images.push(await fetchData(`${API}/${i}`))
+            data = await fetchData(`${API}/${i}`);
+            images.push(data.image)
         }
         await heroImagesContainerView(images, heroContainer)
 
         images = []
-        for (let i = 4; i < 12; i++) {
-            images.push(await fetchData(`${API}/${i}`))
+        for (let i = 4; i < 13; i++) {
+            data = await fetchData(`${API}/${i}`);
+            images.push(data.image)
         }
-        console.log(images)
         await mainCharacterImageContainer(images, mainContainer);
+    
 
     } catch (err) {
         console.log(err)
