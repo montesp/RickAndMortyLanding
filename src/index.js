@@ -21,13 +21,22 @@ async function fetchData(api){
 const heroImagesContainerView = async (images, container) => {
     let view = "";
     for (let index = 0; index < images.length; index++) {
-        view += `
+        // if(index == 0){
+        //     view += `
+        //     <img class="carrusel-hero__image carrusel-hero__image--selected" src="${images[index]}" alt="">
+        // `;
+        // } else {
+        //     view += `
+        //     <img class="carrusel-hero__image" src="${images[index]}" alt="">
+        // `;
+            view += `
             <img class="carrusel-hero__image" src="${images[index]}" alt="">
-        `;
-        container.innerHTML = view;
+            `;
+    } 
+    container.innerHTML = view;
 
-    }
 }
+
 
 const mainCharacterImageContainer = async (images, container) => {
     let view = "";
@@ -46,7 +55,7 @@ const mainCharacterImageContainer = async (images, container) => {
 (async () => {
     try {
         let images = []
-        for (let i = 1; i <= 3; i++) {
+        for (let i = 1; i < 5; i++) {
             data = await fetchData(`${API}/${i}`);
             images.push(data.image)
         }

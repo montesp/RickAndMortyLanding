@@ -9,6 +9,7 @@
     --title-color: #100F0F;
     --page-color: #131313;
     --background-white:#eeeff3;
+    --hero: #303136;
 }
 
 * {
@@ -237,10 +238,11 @@ body {
 }
 
 .hero {
-    background-color: #100F0F;
+    background-color: var(--page-color);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
     align-items: center;
     width: 100%;
     height: 80vh;
@@ -249,25 +251,50 @@ body {
 
 .hero__title {
     color: white;
-    font-size: 5rem;
-    margin-bottom: 20px;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    font-size: 3rem;
+    margin: 20px 0;
+    /* margin-bottom: 20px; */
 }
 
 .hero__carrusel {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: relative;
     align-items: center;
     gap: 60px;
     width: 100%;
-    height: auto;
+    height: 100%;
+    overflow: auto;
 }
 
 .carrusel-hero__image {
-    width: 400px;
-    height: 400px;
+    position: relative;
+    width: 500px;
+    height: 600px;
     border-radius: 40px;
 }
+
+.carrusel-hero__image--selected {
+    display: block;
+}
+
+.carrusel__button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+
+.carrusel__button img {
+    width: 100%;
+    height: 100%;
+}
+
+
+
 
 .carrusel-character__image {
     width: 350px;
