@@ -55,14 +55,14 @@ const mainCharacterImageContainer = async (images, container) => {
 (async () => {
     try {
         let images = []
-        for (let i = 1; i < 5; i++) {
+        for (let i = 1; i < 6; i++) {
             data = await fetchData(`${API}/${i}`);
             images.push(data.image)
         }
         await heroImagesContainerView(images, heroContainer)
 
         images = []
-        for (let i = 4; i < 13; i++) {
+        for (let i = 6; i < 26; i++) {
             data = await fetchData(`${API}/${i}`);
             images.push(data.image)
         }
